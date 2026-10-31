@@ -1,5 +1,3 @@
-mkdir -p .github/workflows
-cat > .github/workflows/arvouz-image.yml <<'YAML'
 name: arvouz-image
 on:
   push: { branches: [arvouz/main] }
@@ -22,5 +20,3 @@ jobs:
           RUNNERS_IMAGE_BASE_NAME: ghcr.io/rchmndbtst/n8n-runners
           IMAGE_TAG: arvouz
       - run: docker push ghcr.io/rchmndbtst/n8n:arvouz
-YAML
-ls -l .github/workflows/arvouz-image.yml
